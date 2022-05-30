@@ -1,0 +1,11 @@
+public class Main {
+        public static void main(String[] args) {
+
+            EmpDriver emp1 = new EmpDriver(1985,45,2000.0,"Ahmet");
+            emp1.toString(emp1);
+
+            EmpDriver emp2 = new  EmpDriver(1986,46,2000.0,"Kemal");
+            emp2.toString(emp2);
+
+        }
+    }

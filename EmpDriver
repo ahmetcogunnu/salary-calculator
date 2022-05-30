@@ -1,0 +1,38 @@
+public class EmpDriver {
+    private String name;
+    public double salary;
+    private int workHourse,hireYear;
+    EmpDriver(int hireYear,int workHourse, double salary  , String name ){
+        this.name = name;
+        this.salary = salary;
+        this.hireYear = hireYear;
+        this.workHourse = workHourse;
+    }
+    public double tax (){
+        if (this.salary >=1000){
+            return salary*0.03;
+        }return 0.0;
+    }
+    public double bonus (){
+        int extraHours = this.workHourse-40;
+        if (extraHours >0){
+            return 30*extraHours;
+        }return 0.0;
+    }
+    public double incrase(){
+        int year = 2020-this.hireYear;
+        if (year <10){
+            return salary*0.5;
+        }else {
+            return salary *0.15;
+        }
+    }
+    public  void toString (EmpDriver emp){
+        System.out.println("Tax : "+emp.tax());
+        System.out.println("Bonus :"+emp.bonus());
+        System.out.println("Incrase Salary : "+emp.incrase());
+        double totalSalary = emp.salary-emp.tax()+emp.bonus();
+        System.out.println("Total Salary With the Tax and Bonus :" +totalSalary);
+        System.out.println("Total Salary with the raise of Salary :"+emp.salary+emp.incrase());
+    }
+}
